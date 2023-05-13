@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="left">
+        <div class="left-wrapper">
+            <div class="left-top">
+                <div class="picture">
+                    <img src="https://zipmex.com/static/d1af016df3c4adadee8d863e54e82331/1bbe7/Twitter-NFT-profile.jpg" alt="Picture">
+                </div>
+            </div>
+            <div class="left-bottom">
+                <div class="contact-info">
+                    <ul>
+                        <li>E-mail: patryk.zastawniak16@gmail.com</li>
+                        <li> tel. 530 720 226</li>
+                        <li>ur 03.08.2002</li>
+                        <li>wrocław</li>
+                    </ul>
+                    
+                </div>
+                <div class="school">
+                    Czerwonka
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="right-wrapper">
+            <div class="buttons">
+                <button class="button" id="left-button"><</button>
+                <div class="gap"></div>
+                <button class="button" id="right-button">></button>
+            </div>
+            <script>
+let counter = 0;
+
+function updateView() {
+  if (counter === 0) {
+    document.getElementById('gastronomia-wrapper').style.display = 'block';
+    document.getElementById('magazyn-wrapper').style.display = 'none';
+    document.getElementById('informatyka-wrapper').style.display = 'none';
+  } else if (counter === 1) {
+    document.getElementById('magazyn-wrapper').style.display = 'block';
+    document.getElementById('gastronomia-wrapper').style.display = 'none';
+    document.getElementById('informatyka-wrapper').style.display = 'none';
+  } else {
+    document.getElementById('informatyka-wrapper').style.display = 'block';
+    document.getElementById('magazyn-wrapper').style.display = 'none';
+    document.getElementById('gastronomia-wrapper').style.display = 'none';
+  }
+}
+
+function increaseCounter() {
+  counter++;
+  if (counter > 2) {
+    counter = 0;
+  }
+  console.log(counter);
+  updateView();
+}
+
+function decreaseCounter() {
+  counter--;
+  if (counter < 0) {
+    counter = 2;
+  }
+  console.log(counter);
+  updateView();
+}
+
+document.getElementById('right-button').addEventListener('click', increaseCounter);
+document.getElementById('left-button').addEventListener('click', decreaseCounter);
+updateView();
+
+            </script>
+<div class="window">
+    <div class="grid-wrapper">
+        <!-------------------GASTRO----------------------------->
+        <div class="gastronomia_wrapper" id="gastronomia-wrapper">
+            <div class="expirience" id="Hotel-nowyzdrój">
+               <div class="place">Hotel nowy zdrój</div>
+                <div class="time"> czas pracy:
+                08.2020 – 08.2022</div>
+                <div class="what"> <p> info: <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam alias enim, maxime tempore explicabo, error assumenda numquam id aut non veniam ratione ut vel aliquid! Aliquid dolore tenetur vitae soluta?</p></div>
+            </div>
+            <div class="card" id="Willa-polanica-card">
+                <div class="place">Willa Polanica</div>
+                 <div class="time"> czas pracy:
+                07.2022 – 08.2022</div>
+                 <div class="what"> <p> info: <br>
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam alias enim, maxime tempore explicabo, error assumenda numquam id aut non veniam ratione ut vel aliquid! Aliquid dolore tenetur vitae soluta?</p></div>
+             </div>
+        </div>
+        <!-------------------Magazyn----------------------------->
+        <div class="magazyn_wrapper" id="magazyn-wrapper">
+             <div class="card" id="Skoda-kwasiny-card">
+                <div class="place">Skoda Kvasiny</div>
+                 <div class="time"> czas pracy:
+                08.2022 – 10.2022</div>
+                 <div class="what"> <p> info: <br>
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam alias enim, maxime tempore explicabo, error assumenda numquam id aut non veniam ratione ut vel aliquid! Aliquid dolore tenetur vitae soluta?</p></div>
+             </div>
+        </div>
+        <!-------------------Informatyka----------------------------->
+        <div class="informatyka_wrapper" id="informatyka-wrapper">
+             <div class="card" id="Enerson-card">
+                <div class="place">Enerson</div>
+                 <div class="time"> czas pracy:
+                07.2021 – 08.2021</div>
+                 <div class="what"> <p> info: <br>
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam alias enim, maxime tempore explicabo, error assumenda numquam id aut non veniam ratione ut vel aliquid! Aliquid dolore tenetur vitae soluta?</p></div>
+             </div>
+             <div class="card" id="Info-lex-card">
+                <div class="place">Info-lex</div>
+                 <div class="time"> czas pracy:
+                06.2020 – 07.2020</div>
+                 <div class="what">  <p> info: <br>
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam alias enim, maxime tempore explicabo, error assumenda numquam id aut non veniam ratione ut vel aliquid! Aliquid dolore tenetur vitae soluta?</p></div>
+             </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</body>
+</html>

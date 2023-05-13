@@ -1,0 +1,76 @@
+html{
+    padding: 0;
+    margin: 0;
+    font-family: 'Anuphan', sans-serif;
+    background-color: rgb(32, 32, 32);
+    color: aliceblue;
+}
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.left{
+    height: 100vh;
+    flex: 1;
+    border: 5px solid green;
+}
+.right{
+    height: 100vh;
+    flex: 4;
+    border: 5px solid blue;
+}
+img{
+    width: 350px;
+    height: auto;
+}
+.buttons{
+    padding: 40px;
+    display: flex;
+}
+.gap{
+    flex: 1;
+}
+button{
+    flex: 2;
+    height: 5vh;
+    text-align: center;
+    pointer-events: stroke;
+}
+.window{
+    overflow: none;/*----------Zmien na hidden jak skończysz---------*/
+}
+.grid-wrapper{
+    display: grid;
+    grid-template-columns: 100% 100% 100% ;
+    gap: 10px;
+}
+/*-----------Gastro------------*/
+.gastronomia-wrapper{
+    display: none;
+}
+/*-----------Gastro------------*/
+.magazyn-wrapper{
+    display: none;
+}
+/*-----------Gastro------------*/
+.informatyka-wrapper{
+    display: block;
+}
+.card{
+    width: 20vw;
+    padding: 20px;
+    margin: 10px;
+    background-color: dimgrey;
+    border-radius: 10px;
+    box-shadow: 10px 5px gray
+}
+.place{
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+
+
+  
